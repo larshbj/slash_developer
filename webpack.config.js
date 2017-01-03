@@ -4,7 +4,7 @@ module.exports = {
   entry: './src/index.js',
 
   output: {
-    path: path.join('./bundles'),
+    path: path.join(__dirname, './bundles'),
     filename: 'app.bundle.js',
     publicPath: 'http://localhost:3000/bundles/'
   },
@@ -14,7 +14,10 @@ module.exports = {
           {
               test: [/\.jsx?$/, /\.es6$/],
               exclude: /node_modules/,
-              loaders: ['babel-loader']
+              loader: 'babel-loader',
+              query: {
+                    presets: ['es2015', 'react']
+              }
           },
           {
               test: [/\.scss$/, /\.css$/],
