@@ -1,6 +1,6 @@
 import React from 'react';
 import NavLink from './NavLink.jsx';
-import { Link } from 'react-router'
+import { Link } from 'react-router';
 
 const App = React.createClass({
   render: function () {

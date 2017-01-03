@@ -14,10 +14,7 @@ module.exports = {
           {
               test: [/\.jsx?$/, /\.es6$/],
               exclude: /node_modules/,
-              loader: 'babel-loader',
-              query: {
-                    presets: ['es2015', 'react']
-              }
+              loaders: ['react-hot', 'babel-loader?presets[]=es2015&presets[]=react'],
           },
           {
               test: [/\.scss$/, /\.css$/],
@@ -25,9 +22,9 @@ module.exports = {
           }
       ]
   },
-  // resolve: {
-  //     modulesDirectories: ['node_modules'],
-  //     root: path.resolve(__dirname, "src"),
-  //     extensions: ['', '.js', '.jsx']
-  // }
+  resolve: {
+      modulesDirectories: ['node_modules'],
+      root: path.resolve(__dirname, "src"),
+      extensions: ['', '.js', '.jsx']
+  }
 };
