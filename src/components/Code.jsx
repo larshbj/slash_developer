@@ -2,6 +2,8 @@ import React from 'react';
 
 export default React.createClass({
   render() {
-    return <div>Plugins</div>;
+    return (
+        <div className="plugins">Plugins</div>
+        );
   }
 });

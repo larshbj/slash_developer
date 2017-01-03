@@ -6,6 +6,7 @@ import Api from './components/Api-services.jsx';
 import Datasets from './components/Datasets.jsx';
 import Code from './components/Code.jsx';
 import Home from './components/Home.jsx';
+require('./css/app.scss');
 
 
 ReactDOM.render((
