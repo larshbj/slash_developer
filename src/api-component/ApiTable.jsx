@@ -4,10 +4,10 @@ import {Link} from 'react-router';
 var ReactTable = require('@norkart/react-table');
 require('@norkart/react-table/dist/react-table.css');
 
-import filterDatasets from './filterDatasets';
+import filterTable from '../filterTable';
 
-var mockApi = require('../mockApi.js');
-let mockJson = mockApi.mockJson;
+var mocks = require('../mocks.js');
+let mockJson = mocks.mockApi;
 
 function firstN(str, n) {
     if (!str) {
@@ -22,16 +22,9 @@ function firstN(str, n) {
 
 var columns = [
     {
-        id: 'index',
-        name: 'Id',
-        sortParams: 'Id',
-        isSorted: true,
-        sortDirection: 'asc'
-    },
-    {
         id: 'name',
         name: 'Navn',
-        sortParams: 'Name',
+        sortParams: 'name',
         isSorted: false,
         sortDirection: 'asc'
         // formatter: function (dataset) {
@@ -46,13 +39,21 @@ var columns = [
         formatter: function (dataset) {
             return (<p title={dataset.about}>{firstN(dataset.about, 10)}</p>);
         },
-        sortParams: 'Beskrivelse',
+        sortParams: 'about',
         sortable: false
+    },
+    {
+        id: 'category',
+        name: 'Kategori',
+        sortParams: 'category',
+        filterable: true,
+        isSorted: false,
+        sortDirection: 'asc'
     },
     {
         id: 'documentation',
         name: 'Dokumentasjon',
-        sortParams: 'Dokumentasjon',
+        sortParams: 'documentation',
         sortable: false,
         formatter: function (dataset) {
             if (!dataset.documentation) {
@@ -67,10 +68,9 @@ export default function (props) {
     return (
         <ReactTable
             items={mockJson}
-            idProperty="Id"
-            showIndex={false}
-            searchFunction={filterDatasets}
+            searchFunction={filterTable}
             filterable={true}
+            showIndex={false}
             columns={columns} />
         );
 }

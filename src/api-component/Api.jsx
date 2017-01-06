@@ -5,7 +5,7 @@ import {Link} from 'react-router';
 // import getDatasets from './api/getDatasets';
 import ApiTable from './ApiTable';
 
-var mockApi = require('../mockApi.js');
+var mocks = require('../mocks.js');
 
 export default React.createClass({
   render() {
@@ -49,7 +49,7 @@ export default React.createClass({
 // }
 
 // var DatasetListFetcher = React.createClass({
-//     mockJson: mockApi.mockJson,
+//     mockJson: mocks.mockApi,
 //     getInitialState: function () {
 //         return {datasets: this.mockJson};
 //     },

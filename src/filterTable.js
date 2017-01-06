@@ -1,6 +1,6 @@
 import * as _ from 'underscore';
 
-export default function filterDatasets(filter, items) {
+export default function filterTable(filter, items) {
     if (filter.trim() === '') {
         return items;
     }

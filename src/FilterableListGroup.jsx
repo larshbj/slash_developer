@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as _ from 'underscore';
 
-import filterDatasets from './filterDatasets';
+import filterTable from './filterTable';
 
 var Filter = React.createClass({
 
@@ -49,7 +49,7 @@ var FilterableListGroup = React.createClass({
 
     render: function () {
         var props = this.props;
-        var items = filterDatasets(this.state.filter, props.items);
+        var items = filterTable(this.state.filter, props.items);
         var ItemComponent = props.itemComponent;
         return (
             <div>
