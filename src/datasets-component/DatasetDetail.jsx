@@ -4,7 +4,7 @@ import * as _ from 'underscore';
 import getDataset from '../requests/getDataset';
 import AttributeTable from './AttributeTable';
 import DatasetOverview from './DatasetOverview';
-// import DatasetMap from './DatasetMap';
+import DatasetMap from './DatasetMap';
 
 
 var DatasetDetail = React.createClass({
@@ -17,8 +17,8 @@ var DatasetDetail = React.createClass({
         return {
             tabs: [
                 {id: 'overview', title: 'Detaljer', component: DatasetOverview},
-                {id: 'attributes', title: 'Attributter', component: AttributeTable}
-                // {id: 'map', title: 'Kart', component: DatasetMap}
+                {id: 'attributes', title: 'Attributter', component: AttributeTable},
+                {id: 'map', title: 'Kart', component: DatasetMap}
             ]
         };
     },

@@ -1,12 +1,13 @@
 
 @import 'table';
+@import 'map';
 
-.nav, .headerBox {
+.page-nav, .headerBox {
     margin-left: 2.5%;
     margin-right: 2.5%;
 }
 
-.nav {
+.page-nav {
     position: absolute;
     top: 25%;
     width:97.5%;

@@ -20,11 +20,12 @@ function Datasets(props) {
     }
     var content;
     if (selectedDataset) {
-        console.log('selected dataset' + selectedDataset);
         content = (
             <div className="row">
                 <div className="col-md-4">
-                    <DatasetList selectedDataset={selectedDataset} datasets={props.datasets}/>
+                    <DatasetList 
+                        selectedDataset={selectedDataset}
+                        datasets={props.datasets}/>
                 </div>
                 <div className="col-md-8">
                     {props.children}

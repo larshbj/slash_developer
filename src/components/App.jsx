@@ -7,7 +7,7 @@ const App = React.createClass({
     return (
       <div>
         <div className="headerBox"><Link to="/"onlyActiveOnIndex={true} className="headerTitle">For utviklere </Link></div>
-        <div className="nav">
+        <div className="page-nav">
             <NavLink to="/api">APIer</NavLink>
             <NavLink to="/datasets">Datasett</NavLink>
             <NavLink to="/plugins">Plugins</NavLink>
