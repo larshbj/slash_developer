@@ -5,6 +5,7 @@ import getDataset from '../requests/getDataset';
 import AttributeTable from './AttributeTable';
 import DatasetOverview from './DatasetOverview';
 import DatasetMap from './DatasetMap';
+// import getDataFromSet from '../requests/getDataFromSet.js';
 
 
 var DatasetDetail = React.createClass({
@@ -17,8 +18,8 @@ var DatasetDetail = React.createClass({
         return {
             tabs: [
                 {id: 'overview', title: 'Detaljer', component: DatasetOverview},
-                {id: 'attributes', title: 'Attributter', component: AttributeTable},
-                {id: 'map', title: 'Kart', component: DatasetMap}
+                {id: 'attributes', title: 'Attributter', component: AttributeTable}
+                // {id: 'map', title: 'Kart', component: DatasetMap}
             ]
         };
     },
@@ -56,12 +57,24 @@ var DatasetDetail = React.createClass({
 var DatasetDetailFetcher = React.createClass({
 
     getInitialState: function () {
-        return {dataset: null};
+        return {
+            dataset: null,
+            data: null
+        };
     },
 
     componentDidMount: function () {
         console.log(this.props.datasetId);
         getDataset(this.gotDataset, this.props.datasetId);
+        // getDataFromSet(this.gotData, this.props.datasetId);
+    },
+
+    gotData: function (err, data) {
+        if (err) {
+            return;
+        }
+        console.log(data);
+        this.setState({data: data});
     },
 
     gotDataset: function (err, dataset) {
@@ -78,7 +91,8 @@ var DatasetDetailFetcher = React.createClass({
         return (
             <DatasetDetail
                 {...this.props}
-                dataset={this.state.dataset}/>
+                dataset={this.state.dataset}
+                data={this.state.data}/>
         );
     }
 });
