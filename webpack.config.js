@@ -2,6 +2,7 @@ var path = require('path');
 
 module.exports = {
   entry: './src/index.js',
+  devtool: 'eval',
 
   output: {
     path: path.join(__dirname, './bundles'),

@@ -6,6 +6,6 @@ export default function filterTable(filter, items) {
     }
     var filter = filter.toLowerCase();
     return _.filter(items, function (item) {
-        return item.name.toLowerCase().indexOf(filter) > -1;
+        return item.Name.toLowerCase().indexOf(filter) > -1;
     });
 }

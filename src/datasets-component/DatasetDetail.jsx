@@ -29,6 +29,7 @@ var DatasetDetail = React.createClass({
     },
 
     render: function () {
+        window.scrollTo(0, 0); // temporary solution so that user instantly sees datadetails
         var Component = _.findWhere(this.props.tabs, {id: this.state.tab}).component;
         return (
             <div>

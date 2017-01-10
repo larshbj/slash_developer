@@ -4,6 +4,12 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'NorkartAvenirHeavy';
+    src: url('../../fonts/AvenirLTStd-Heavy.woff') format('woff');
+    font-style: normal;
+}
+
 body {
     font-family: "NorkartAvenir", "Helvetica Neue", arial, sans-serif;
     font-weight: 500;
@@ -12,7 +18,7 @@ body {
 }
 
 // strong {
-//     font-family: "NorkartAvenir", "Helvetica Neue", arial, sans-serif;
-//     font-weight: 900;
+//     font-family: "NorkartAvenirHeavy", "Helvetica Neue", arial, sans-serif;
+//     // font-weight: 900;
 //     font-style: normal;
 // }

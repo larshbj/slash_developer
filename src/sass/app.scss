@@ -3,29 +3,33 @@
 @import 'map';
 @import 'fonts';
 
+#app {
+    margin: 0 auto;
+    padding: 0 3.125rem;
+}
+
 .page-nav, .headerBox {
-    margin-left: 2.5%;
-    margin-right: 2.5%;
+    // margin-left: 2.5%;
+    // margin-right: 2.5%;
 }
 
 .page-nav {
-    position: absolute;
+    position: relative;
     top: 25%;
-    width:97.5%;
+    width:100%;
     height:10%;
     text-align: left;
 }
 
 .headerBox {
-    position: absolute;
-    top:15%;
-    width:97.5%;
-    height:10%;
+    position: relative;
+    width:100%;
+    height:20%;
     text-align: left;
 }
 
 .page {
-    position: absolute;
+    position: relative;
     height:80%;
     width:100%;
     top:35%;
@@ -71,10 +75,19 @@
     margin-right: 2.5%;
 }
 
+.headerContent {
+    padding: 4.375rem;
+    font-size: 1.25rem;
+    // -webkit-box-pack: justify;
+    // -ms-flex-pack: justify;
+}
+
 .headerTitle {
+    position: relative;
     text-decoration: none;
     color: black;
-    // font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-family: "NorkartAvenirHeavy", "Helvetica Neue", arial, sans-serif;
+    weight: bold;
     margin:auto;
     font-size: 52.5px;
     font-weight: bold;
@@ -89,5 +102,57 @@
         text-decoration: none;
         color: black;
     }
+}
+
+.descriptionContainer {
+    position: relative;
+    max-width: 43.75rem;
+    float: right;
+    right: 15%;
+}
+
+.headerDescription {
+    position: relative;
+    top:50%;
+    font-size: 20px;
+}
+
+.home {
+    position: inherit;
+    height: inherit;
+    margin: 0 auto;
+    // width: 50%;
+    text-align: center;
+}
+
+.post {
+    position: inherit;
+    top: 25%;
+    // padding: 1.5625rem 2.8125rem 2.5rem;
+    display: inline-block;
+    background-color: #f9f9f9;
+    margin-left: 5%;
+    margin-right: 5%; 
+}
+
+.page-link {
+    padding: 1.5625rem 2.8125rem 2.5rem;
+    text-decoration: none;
+    color: black;
+    font-family: "NorkartAvenirHeavy", "Helvetica Neue", arial, sans-serif;
+    weight: bold;
+    background-color: #f9f9f9;
+    margin-left: 5%;
+    margin-right: 5%; 
+
+    &:hover {
+        text-decoration: none;
+        color: black;
+    }
+
+    // &:visited {
+    //     text-decoration: none;
+    //     color: black;
+    // }
 }
 

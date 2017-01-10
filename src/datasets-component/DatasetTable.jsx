@@ -6,9 +6,6 @@ require('@norkart/react-table/dist/react-table.css');
 
 import filterTable from '../filterTable';
 
-var mocks = require('../mocks.js');
-let mockJson = mocks.mockApi;
-
 function firstN(str, n) {
     if (!str) {
         return str;
@@ -33,14 +30,14 @@ var columns = [
             );
         }
     },
-    // {
-    //     id: 'Temagruppe',
-    //     name: 'Temagruppe',
-    //     sortParams: 'Temagruppe',
-    //     filterable: true,
-    //     isSorted: false,
-    //     sortDirection: 'asc'
-    // },
+    {
+        id: 'Temagruppe',
+        name: 'Temagruppe',
+        sortParams: 'Temagruppe',
+        filterable: true,
+        isSorted: false,
+        sortDirection: 'asc'
+    },
     // {
     //     id: 'Dataeier',
     //     name: 'Dataeier',
