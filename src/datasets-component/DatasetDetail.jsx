@@ -5,7 +5,7 @@ import getDataset from '../requests/getDataset';
 import AttributeTable from './AttributeTable';
 import DatasetOverview from './DatasetOverview';
 import DatasetMap from './DatasetMap';
-// import getDataFromSet from '../requests/getDataFromSet.js';
+import getDataFromSet from '../requests/getDataFromSet.js';
 
 
 var DatasetDetail = React.createClass({
@@ -18,8 +18,8 @@ var DatasetDetail = React.createClass({
         return {
             tabs: [
                 {id: 'overview', title: 'Detaljer', component: DatasetOverview},
-                {id: 'attributes', title: 'Attributter', component: AttributeTable}
-                // {id: 'map', title: 'Kart', component: DatasetMap}
+                {id: 'attributes', title: 'Attributter', component: AttributeTable},
+                {id: 'map', title: 'Kart', component: DatasetMap}
             ]
         };
     },
@@ -66,14 +66,13 @@ var DatasetDetailFetcher = React.createClass({
     componentDidMount: function () {
         console.log(this.props.datasetId);
         getDataset(this.gotDataset, this.props.datasetId);
-        // getDataFromSet(this.gotData, this.props.datasetId);
+        getDataFromSet(this.gotData, this.props.datasetId, 'KommuneNr', '0220');
     },
 
     gotData: function (err, data) {
         if (err) {
             return;
         }
-        console.log(data);
         this.setState({data: data});
     },
 

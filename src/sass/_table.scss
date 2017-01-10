@@ -24,6 +24,18 @@
     border-bottom:0rem solid white;
 }
 
+
+.avtive {
+    border-radius:0px;
+}
+
+.list-group-item:first-child, .list-group-item:last-child {
+    border-radius:0px;
+}
+
+.glyphicon-search {
+    top:25%;
+}
 // .react-table .table {
 //     border-collapse: collapse;
 // }

@@ -1,6 +1,7 @@
 
 @import 'table';
 @import 'map';
+@import 'fonts';
 
 .page-nav, .headerBox {
     margin-left: 2.5%;
@@ -47,8 +48,8 @@
     text-align: center;
     text-decoration: none;
     color: black;
-    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-    font-size: 1em;
+    // font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    // font-size: 1em;
     display: inline-block;
 
     &:hover {
@@ -73,12 +74,18 @@
 .headerTitle {
     text-decoration: none;
     color: black;
-    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    // font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     margin:auto;
-    font-size: 4em;
+    font-size: 52.5px;
+    font-weight: bold;
     cursor: pointer;
 
     &:hover {
+        text-decoration: none;
+        color: black;
+    }
+
+    &:visited {
         text-decoration: none;
         color: black;
     }

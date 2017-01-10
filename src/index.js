@@ -8,6 +8,7 @@ import DatasetDetail from './datasets-component/DatasetDetail.jsx';
 import Code from './components/Code.jsx';
 import Home from './components/Home.jsx';
 require('./sass/app.scss');
+require('leaflet/dist/leaflet.css');
 
 
 ReactDOM.render((

@@ -1,7 +1,9 @@
 import callApi from './requestApi';
 
-export default function getDataset(callback, datasetId) {
-    callApi('get', '/datasets/' + datasetId +
-            '/features/attributequery?AttributeKey=fylkesnr&AttributeValue=16&SRS=4326',
-            null, callback);
+export default function getDataset(callback, datasetId, attributeKey,
+    attributeValue) {
+    let path = '/datasets/' + datasetId +
+            '/features/attributequery?AttributeKey=' + attributeKey + 
+            '&AttributeValue=' + attributeValue;
+    callApi('get', path, null, callback);
 }

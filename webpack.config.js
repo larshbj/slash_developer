@@ -14,7 +14,7 @@ module.exports = {
           {
               test: [/\.jsx?$/, /\.es6$/],
               exclude: /node_modules/,
-              loaders: ['react-hot', 'babel-loader?presets[]=es2015&presets[]=react'],
+              loaders: ['react-hot', 'babel-loader?presets[]=es2015&presets[]=react']
           },
           {
               test: [/\.scss$/, /\.css$/],
@@ -23,6 +23,15 @@ module.exports = {
           {
             test: /mapbox-gl.+\.js$/,
             loader: 'transform/cacheable?brfs'
+          },
+          {
+            test: /\.png$/,
+            loader: 'url-loader',
+            query: {mimetype: "image/png"}
+          },
+          {
+                test: /\.(eot|svg|ttf|woff|woff2)$/,
+                loader: 'file?name=public/fonts/[name].[ext]'
           }
       ]
   },
