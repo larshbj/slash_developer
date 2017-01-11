@@ -1,4 +1,5 @@
 import * as React from 'react';
+import * as ReactDOM from 'react-dom';
 import * as _ from 'underscore';
 
 import filterTable from './filterTable';
@@ -41,6 +42,15 @@ var FilterableListGroup = React.createClass({
 
     getInitialState: function () {
         return {filter: ''};
+    },
+
+    componentDidMount: function () {
+        // var div = ReactDOM.findDOMNode(this.);
+        // console.log(div);
+        // var div = ReactDOM.findDOMNode(this.props.items[this.props.selectedItem]);
+        // let activeItem = document.getElementsByClassName('list-group-item active');
+        // let topPos = activeItem.offsetTop;
+        // document.getElementsByClassName('list-group').scrollTop = topPos;
     },
 
     onFilter: function (filter) {

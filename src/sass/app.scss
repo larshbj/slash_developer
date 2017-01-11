@@ -128,11 +128,12 @@
 .post {
     position: inherit;
     top: 25%;
-    // padding: 1.5625rem 2.8125rem 2.5rem;
     display: inline-block;
-    background-color: #f9f9f9;
     margin-left: 5%;
     margin-right: 5%; 
+
+    // padding: 1.5625rem 2.8125rem 2.5rem;
+    // margin-right: 5%; 
 }
 
 .page-link {
@@ -142,8 +143,6 @@
     font-family: "NorkartAvenirHeavy", "Helvetica Neue", arial, sans-serif;
     weight: bold;
     background-color: #f9f9f9;
-    margin-left: 5%;
-    margin-right: 5%; 
 
     &:hover {
         text-decoration: none;

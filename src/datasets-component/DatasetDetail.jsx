@@ -29,7 +29,7 @@ var DatasetDetail = React.createClass({
     },
 
     render: function () {
-        window.scrollTo(0, 0); // temporary solution so that user instantly sees datadetails
+        // window.scrollTo(0, 0); // temporary solution so that user instantly sees datadetails
         var Component = _.findWhere(this.props.tabs, {id: this.state.tab}).component;
         return (
             <div>
@@ -67,15 +67,14 @@ var DatasetDetailFetcher = React.createClass({
     componentDidMount: function () {
         console.log(this.props.datasetId);
         getDataset(this.gotDataset, this.props.datasetId);
-        getDataFromSet(this.gotData, this.props.datasetId, 'KommuneNr', '0220');
     },
 
-    gotData: function (err, data) {
-        if (err) {
-            return;
-        }
-        this.setState({data: data});
-    },
+    // gotData: function (err, data) {
+    //     if (err) {
+    //         return;
+    //     }
+    //     this.setState({data: data});
+    // },
 
     gotDataset: function (err, dataset) {
         if (err) {

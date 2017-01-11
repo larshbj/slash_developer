@@ -98,17 +98,28 @@ var columns = [
             }
             return (<a href={dataset.Link}>link</a>);
         }
+    },
+    {
+        id: 'Kartlink',
+        name: 'Eksempel',
+        sortParams: 'Kartlink',
+        sortable: false,
+        formatter: function (dataset) {
+            return (
+                <Link to={'/datasets/' + dataset.Id + '/map'}>Kart</Link>
+            );
+        }
     }
-    // {
-    //     id: 'Datatype',
-    //     name: 'Datatype',
-    //     sortParams: 'Datatype',
-    //     isSorted: false,
-    //     sortDirection: 'asc'
-    // }
 ];
 
 export default function (props) {
+    // console.log(props);
+    // let datasets = props.datasets;
+    // for (let set in datasets) {
+    //     let dataset = datasets[set];
+    //     let id = dataset.Id;
+    //     dataset.Kartlink = props.location.pathname + "/" + id + "/map";
+    // }
     return (
         <ReactTable
             items={props.datasets}

@@ -3,15 +3,6 @@ import DatasetList from './DatasetList';
 import {Link} from 'react-router';
 import getDatasets from '../requests/getDatasets';
 import DatasetTable from './DatasetTable';
-// export default React.createClass({
-//   render() {
-//     return (
-//         <div className="datasets">
-//             <DatasetTable />
-//         </div>
-//     );
-//   }
-// });
 
 function Datasets(props) {
     var selectedDataset = props.params.datasetId;
@@ -34,7 +25,9 @@ function Datasets(props) {
         );
     } else {
         content = (
-            <DatasetTable datasets={props.datasets}/>
+            <DatasetTable
+                {... props}
+                    datasets={props.datasets}/>
         );
     }
     return (

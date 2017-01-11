@@ -22,9 +22,9 @@ function firstN(str, n) {
 
 var columns = [
     {
-        id: 'name',
+        id: 'Name',
         name: 'Navn',
-        sortParams: 'name',
+        sortParams: 'Name',
         isSorted: false,
         sortDirection: 'asc'
         // formatter: function (dataset) {
