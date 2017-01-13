@@ -13,6 +13,7 @@ function Navigation(props) {
             <div className="page-nav">
                 <NavLink to="/api">APIer</NavLink>
                 <NavLink to="/datasets">Datasett</NavLink>
+                <NavLink to="/wms">WMS / Kart</NavLink>
                 <NavLink to="/plugins">Plugins</NavLink>
             </div>
         );

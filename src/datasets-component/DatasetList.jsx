@@ -2,7 +2,7 @@ import * as React from 'react';
 import * as _ from 'underscore';
 import {Link} from 'react-router';
 
-import FilterableListGroup from '../FilterableListGroup';
+import FilterableListGroup from 'util/FilterableListGroup';
 
 var DatasetListItem = function (props) {
     var className = 'list-group-item';

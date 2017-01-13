@@ -4,7 +4,8 @@ import moment from 'moment';
 var ReactTable = require('@norkart/react-table');
 require('@norkart/react-table/dist/react-table.css');
 
-import filterTable from '../filterTable';
+import filterTable from 'util/filterTable';
+import searchTable from 'util/searchTable';
 
 function firstN(str, n) {
     if (!str) {
@@ -98,18 +99,18 @@ var columns = [
             }
             return (<a href={dataset.Link}>link</a>);
         }
-    },
-    {
-        id: 'Kartlink',
-        name: 'Eksempel',
-        sortParams: 'Kartlink',
-        sortable: false,
-        formatter: function (dataset) {
-            return (
-                <Link to={'/datasets/' + dataset.Id + '/map'}>Kart</Link>
-            );
-        }
     }
+    // {
+    //     id: 'Kartlink',
+    //     name: 'Eksempel',
+    //     sortParams: 'Kartlink',
+    //     sortable: false,
+    //     formatter: function (dataset) {
+    //         return (
+    //             <Link to={'/datasets/' + dataset.Id + '/map'}>Kart</Link>
+    //         );
+    //     }
+    // }
 ];
 
 export default function (props) {

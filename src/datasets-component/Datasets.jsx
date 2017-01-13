@@ -6,6 +6,7 @@ import DatasetTable from './DatasetTable';
 
 function Datasets(props) {
     var selectedDataset = props.params.datasetId;
+    console.log(props.datasets);
     if (selectedDataset) {
         selectedDataset = parseInt(selectedDataset, 10);
     }

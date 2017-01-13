@@ -44,15 +44,6 @@ var FilterableListGroup = React.createClass({
         return {filter: ''};
     },
 
-    componentDidMount: function () {
-        // var div = ReactDOM.findDOMNode(this.);
-        // console.log(div);
-        // var div = ReactDOM.findDOMNode(this.props.items[this.props.selectedItem]);
-        // let activeItem = document.getElementsByClassName('list-group-item active');
-        // let topPos = activeItem.offsetTop;
-        // document.getElementsByClassName('list-group').scrollTop = topPos;
-    },
-
     onFilter: function (filter) {
         this.setState({filter: filter});
     },

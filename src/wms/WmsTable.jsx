@@ -6,9 +6,6 @@ require('@norkart/react-table/dist/react-table.css');
 
 import filterTable from 'util/filterTable';
 
-var mocks = require('../mocks.js');
-let mockJson = mocks.mockApi;
-
 function firstN(str, n) {
     if (!str) {
         return str;
@@ -27,47 +24,47 @@ var columns = [
         sortParams: 'Name',
         isSorted: false,
         sortDirection: 'asc'
-        // formatter: function (dataset) {
+        // formatter: function (wms) {
         //     return (
-        //         <Link to={'/datasets/' + dataset.Id}>{dataset.Name}</Link>
+        //         <Link to={'/wmss/' + wms.Id}>{wms.Name}</Link>
         //     );
         // }
     },
     {
         id: 'about',
         name: 'Beskrivelse',
-        formatter: function (dataset) {
-            return (<p title={dataset.about}>{firstN(dataset.about, 10)}</p>);
+        formatter: function (wms) {
+            return (<p title={wms.about}>{firstN(wms.about, 10)}</p>);
         },
         sortParams: 'about',
         sortable: false
-    },
-    {
-        id: 'category',
-        name: 'Kategori',
-        sortParams: 'category',
-        filterable: true,
-        isSorted: false,
-        sortDirection: 'asc'
-    },
-    {
-        id: 'documentation',
-        name: 'Dokumentasjon',
-        sortParams: 'documentation',
-        sortable: false,
-        formatter: function (dataset) {
-            if (!dataset.documentation) {
-                return '-';
-            }
-            return (<a href={dataset.documentation} target="_blank">link</a>);
-        }
     }
+    // {
+    //     id: 'category',
+    //     name: 'Kategori',
+    //     sortParams: 'category',
+    //     filterable: true,
+    //     isSorted: false,
+    //     sortDirection: 'asc'
+    // },
+    // {
+    //     id: 'documentation',
+    //     name: 'Dokumentasjon',
+    //     sortParams: 'documentation',
+    //     sortable: false,
+    //     formatter: function (wms) {
+    //         if (!wms.documentation) {
+    //             return '-';
+    //         }
+    //         return (<a href={wms.documentation} target="_blank">link</a>);
+    //     }
+    // }
 ];
 
 export default function (props) {
     return (
         <ReactTable
-            items={mockJson}
+            items={props.wms}
             searchFunction={filterTable}
             filterable={true}
             showIndex={false}

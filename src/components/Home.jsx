@@ -3,7 +3,7 @@ import PageLink from './PageLink.jsx';
 
 export default React.createClass({
   render() {
-    let mapper = ['api', 'datasets', 'plugins'];
+    let mapper = ['api', 'datasets', 'wms', 'plugins'];
     return (
         <div className="home">
                 {mapper.map(function (page) {

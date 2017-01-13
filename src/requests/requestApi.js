@@ -28,3 +28,29 @@ export default function callApi(method, path, data, callback) {
         }
     });
 }
+
+export function callWms(method, path, callback) {
+    let BASE_URL = '//:http://waapi.webatlas.no';
+    var headers = {
+        'APITOKEN': key
+    };
+    reqwest({
+        url: BASE_URL + path,
+        crossOrigin: true,
+        type: 'xml',
+        method: method,
+        contentType: 'text/xml; charset=utf-8',
+        headers: headers,
+        data: data,
+        error: function (err) {
+            try {
+                callback(JSON.parse(err.response));
+            } catch (e) {
+                callback(err);
+            }
+        },
+        success: function (resp) {
+            callback(null, resp);
+        }
+    });
+}

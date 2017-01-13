@@ -8,6 +8,7 @@ import DatasetDetail from './datasets-component/DatasetDetail.jsx';
 import DatasetMap from './datasets-component/DatasetMap.jsx';
 import Code from './components/Code.jsx';
 import Home from './components/Home.jsx';
+import Wms from './wms/Wms.jsx';
 require('./sass/app.scss');
 require('leaflet/dist/leaflet.css');
 
@@ -22,6 +23,7 @@ ReactDOM.render((
                 <Route path="/datasets/:datasetId/map" component={DatasetMap}/>
             </Route>
         </Route>
+        <Route path="/wms" component={Wms}/>
         <Route path="/plugins" component={Code}/>
     </Route>
   </Router>
