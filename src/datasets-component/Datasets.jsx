@@ -12,13 +12,13 @@ function Datasets(props) {
     var content;
     if (selectedDataset) {
         content = (
-            <div className="row">
-                <div className="col-md-4">
+            <div className="row dataset">
+                <div className="col-md-3 list">
                     <DatasetList 
                         selectedDataset={selectedDataset}
                         datasets={props.datasets}/>
                 </div>
-                <div className="col-md-8">
+                <div className="col-md-9 details">
                     {props.children}
                 </div>
             </div>

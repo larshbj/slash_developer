@@ -26,8 +26,26 @@
 
 }
 
+// .row &.dataset {
+//         display: table;
+// }
+
+// .col-md-9 {
+//     &.details {
+//         display: table-cell;
+//     }
+// }
+
+// .col-md-3 &.list {
+//         display: table-cell;
+//         overflow: hidden;
+//         // position: relative;
+//         // height:inherit;
+// }
+
 .list-group {
-    height: 80%;
+    // position: relative;
+    height: 120%; // to set it approx to details and map height
     overflow: auto;
 
     &::-webkit-scrollbar {
