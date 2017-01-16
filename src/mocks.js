@@ -105,3 +105,168 @@ export const mockApi = [
     "documentation": "http://norkart.no"
   }
 ]
+
+export const mockWms = [
+  {
+    "index": 0,
+    "Name": "wms-matrikkelkart",
+    "Beskrivelse": "Beskrivelse av WMS-tjeneste",
+    "CRS": "<SyntaxError: Unexpected token :>",
+    "Layers": "Eiendomskart_bygninger",
+    "Kontaktperson": "laksjdas@norkart.no",
+    "Eksempel": "bilde"
+  },
+  {
+    "index": 1,
+    "Name": "wms-fkb-bygg",
+    "Beskrivelse": "Beskrivelse av WMS-tjeneste",
+    "CRS": "<SyntaxError: Unexpected token :>",
+    "Layers": "Eiendomskart_oversikt",
+    "Kontaktperson": "laksjdas@norkart.no",
+    "Eksempel": "bilde"
+  },
+  {
+    "index": 2,
+    "Name": "wms-takhelning",
+    "Beskrivelse": "Beskrivelse av WMS-tjeneste",
+    "CRS": "<SyntaxError: Unexpected token :>",
+    "Layers": "Eiendomskart_bygninger",
+    "Kontaktperson": "laksjdas@norkart.no",
+    "Eksempel": "bilde"
+  },
+  {
+    "index": 3,
+    "Name": "WMS-KOMMUNEDATA",
+    "Beskrivelse": "Beskrivelse av WMS-tjeneste",
+    "CRS": "<SyntaxError: Unexpected token :>",
+    "Layers": "Eiendomskart_bygninger",
+    "Kontaktperson": "laksjdas@norkart.no",
+    "Eksempel": "bilde"
+  },
+  {
+    "index": 4,
+    "Name": "WMS-VEKTOR-GRAY",
+    "Beskrivelse": "Beskrivelse av WMS-tjeneste",
+    "CRS": "<SyntaxError: Unexpected token :>",
+    "Layers": "Eiendomskart_bygninger",
+    "Kontaktperson": "laksjdas@norkart.no",
+    "Eksempel": "bilde"
+  },
+  {
+    "index": 5,
+    "Name": "wms-wae-komtek-innbygger",
+    "Beskrivelse": "Beskrivelse av WMS-tjeneste",
+    "CRS": "<SyntaxError: Unexpected token :>",
+    "Layers": "Eiendomskart_oversikt",
+    "Kontaktperson": "laksjdas@norkart.no",
+    "Eksempel": "bilde"
+  },
+  {
+    "index": 6,
+    "Name": "WMS-KOMMUNEDATA",
+    "Beskrivelse": "Beskrivelse av WMS-tjeneste",
+    "CRS": "<SyntaxError: Unexpected token :>",
+    "Layers": "Eiendomskart_oversikt",
+    "Kontaktperson": "laksjdas@norkart.no",
+    "Eksempel": "bilde"
+  },
+  {
+    "index": 7,
+    "Name": "wms-finn-hybrid",
+    "Beskrivelse": "Beskrivelse av WMS-tjeneste",
+    "CRS": "<SyntaxError: Unexpected token :>",
+    "Layers": "Eiendomskart_oversikt",
+    "Kontaktperson": "laksjdas@norkart.no",
+    "Eksempel": "bilde"
+  },
+  {
+    "index": 8,
+    "Name": "wms-takhelning",
+    "Beskrivelse": "Beskrivelse av WMS-tjeneste",
+    "CRS": "<SyntaxError: Unexpected token :>",
+    "Layers": "Eiendomskart_oversikt",
+    "Kontaktperson": "laksjdas@norkart.no",
+    "Eksempel": "bilde"
+  },
+  {
+    "index": 9,
+    "Name": "WMS-TILTAK",
+    "Beskrivelse": "Beskrivelse av WMS-tjeneste",
+    "CRS": "<SyntaxError: Unexpected token :>",
+    "Layers": "Eiendomskart_bygninger",
+    "Kontaktperson": "laksjdas@norkart.no",
+    "Eksempel": "bilde"
+  },
+  {
+    "index": 10,
+    "Name": "wms-standardkart",
+    "Beskrivelse": "Beskrivelse av WMS-tjeneste",
+    "CRS": "<SyntaxError: Unexpected token :>",
+    "Layers": "Eiendomskart_bygninger",
+    "Kontaktperson": "laksjdas@norkart.no",
+    "Eksempel": "bilde"
+  },
+  {
+    "index": 11,
+    "Name": "WMS-VEKTOR-GRAY",
+    "Beskrivelse": "Beskrivelse av WMS-tjeneste",
+    "CRS": "<SyntaxError: Unexpected token :>",
+    "Layers": "Eiendomskart_oversikt",
+    "Kontaktperson": "laksjdas@norkart.no",
+    "Eksempel": "bilde"
+  },
+  {
+    "index": 12,
+    "Name": "wms-finn-hybrid",
+    "Beskrivelse": "Beskrivelse av WMS-tjeneste",
+    "CRS": "<SyntaxError: Unexpected token :>",
+    "Layers": "Eiendomskart_oversikt",
+    "Kontaktperson": "laksjdas@norkart.no",
+    "Eksempel": "bilde"
+  },
+  {
+    "index": 13,
+    "Name": "wms-vegkategori",
+    "Beskrivelse": "Beskrivelse av WMS-tjeneste",
+    "CRS": "<SyntaxError: Unexpected token :>",
+    "Layers": "Eiendomskart_oversikt",
+    "Kontaktperson": "laksjdas@norkart.no",
+    "Eksempel": "bilde"
+  },
+  {
+    "index": 14,
+    "Name": "wms-matrikkelkart",
+    "Beskrivelse": "Beskrivelse av WMS-tjeneste",
+    "CRS": "<SyntaxError: Unexpected token :>",
+    "Layers": "Eiendomskart_bygninger",
+    "Kontaktperson": "laksjdas@norkart.no",
+    "Eksempel": "bilde"
+  },
+  {
+    "index": 15,
+    "Name": "WMS-TEMADATA-KOMTEK",
+    "Beskrivelse": "Beskrivelse av WMS-tjeneste",
+    "CRS": "<SyntaxError: Unexpected token :>",
+    "Layers": "Eiendomskart_bygninger",
+    "Kontaktperson": "laksjdas@norkart.no",
+    "Eksempel": "bilde"
+  },
+  {
+    "index": 16,
+    "Name": "wms-finn-orto",
+    "Beskrivelse": "Beskrivelse av WMS-tjeneste",
+    "CRS": "<SyntaxError: Unexpected token :>",
+    "Layers": "Eiendomskart_bygninger",
+    "Kontaktperson": "laksjdas@norkart.no",
+    "Eksempel": "bilde"
+  },
+  {
+    "index": 17,
+    "Name": "WMS-VA",
+    "Beskrivelse": "Beskrivelse av WMS-tjeneste",
+    "CRS": "<SyntaxError: Unexpected token :>",
+    "Layers": "Eiendomskart_oversikt",
+    "Kontaktperson": "laksjdas@norkart.no",
+    "Eksempel": "bilde"
+  }
+]

@@ -5,6 +5,7 @@ var ReactTable = require('@norkart/react-table');
 require('@norkart/react-table/dist/react-table.css');
 
 import filterTable from 'util/filterTable';
+import WmsMap from './WmsMap';
 
 function firstN(str, n) {
     if (!str) {
@@ -31,22 +32,23 @@ var columns = [
         // }
     },
     {
-        id: 'about',
+        id: 'Beskrivelse',
         name: 'Beskrivelse',
         formatter: function (wms) {
-            return (<p title={wms.about}>{firstN(wms.about, 10)}</p>);
+            return (<p title={wms.Beskrivelse}>{firstN(wms.Beskrivelse, 10)}</p>);
         },
-        sortParams: 'about',
+        sortParams: 'Beskrivelse',
         sortable: false
+    },
+    {
+        id: 'Eksempel',
+        name: 'Eksempel',
+        sortParams: 'Eksempel',
+        isSorted: false,
+        formatter: function (wms) {
+            return (<WmsMap service={wms.Name} />);
+        }
     }
-    // {
-    //     id: 'category',
-    //     name: 'Kategori',
-    //     sortParams: 'category',
-    //     filterable: true,
-    //     isSorted: false,
-    //     sortDirection: 'asc'
-    // },
     // {
     //     id: 'documentation',
     //     name: 'Dokumentasjon',

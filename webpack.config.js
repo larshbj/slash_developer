@@ -1,4 +1,5 @@
 var path = require('path');
+var webpack = require('webpack');
 
 module.exports = {
   entry: './src/index.jsx',
@@ -43,5 +44,12 @@ module.exports = {
       alias: {
         'mapbox-gl': path.resolve('./node_modules/mapbox-gl/dist/mapbox-gl.js')
       }
-  }
+  },
+  plugins: [
+      new webpack.ProvidePlugin({
+          "$":"jquery",
+          "jQuery":"jquery",
+          "window.jQuery":"jquery"
+        })
+  ]
 };

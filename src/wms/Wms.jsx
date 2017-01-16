@@ -2,9 +2,10 @@ import * as React from 'react';
 import {Link} from 'react-router';
 import getWms from '../requests/getWms';
 import WmsTable from './WmsTable';
+import {listOfWms} from './wmsList';
 
 var mocks = require('../mocks.js');
-let mockJson = mocks.mockApi;
+let mockJson = mocks.mockWms;
 
 function Wms(props) {
     var selectedWms = false;
@@ -46,7 +47,11 @@ var WmsListFetcher = React.createClass({
     },
 
     componentDidMount: function () {
-        // getWms(this.gotWms);
+        // for (let s in listOfWms) {
+        //     let service = listOfWms[s];
+
+        // }
+        // getWms(this.gotWms, 'wms-matrikkelkart');
         this.setState({wms: mockJson});
     },
 
@@ -54,7 +59,8 @@ var WmsListFetcher = React.createClass({
         if (err) {
             return;
         }
-        this.setState({wms: wms});
+        console.log(wms);
+        // this.setState({wms: wms});
     },
 
     render: function () {

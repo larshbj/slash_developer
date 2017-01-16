@@ -19,6 +19,7 @@
   "homepage": "https://github.com/larshbj/slash_developer#readme",
   "dependencies": {
     "@norkart/react-table": "0.0.13",
+    "jquery": "^3.1.1",
     "leaflet": "^1.0.2",
     "leaflet-webatlastile": "^1.0.1",
     "mapbox-gl": "^0.30.0",

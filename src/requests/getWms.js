@@ -1,6 +1,6 @@
-import {callWMS} from './requestApi';
+import {callWms} from './requestApi';
 
-export default function getDataset(callback, service) {
-    let path = '' + service + '?service=wms&request=getCapabilities';
-    callWMS('get', path, callback);
+export default function getWms(callback, service) {
+    let path = service + '?service=wms&request=getCapabilities/';
+    callWms('get', path, null, callback);
 }

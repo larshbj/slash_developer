@@ -5,9 +5,9 @@ import L from 'leaflet';
 
 // var tileLayer = require('leaflet-webatlastile').webatlasTileLayer;
 
-import {key} from '../requests/key.js';
+import {key} from 'requests/key.js';
 
-var DatasetMap = React.createClass({
+var WmsMap = React.createClass({
 
         componentDidMount: function () {
             var div = ReactDOM.findDOMNode(this);
@@ -17,9 +17,9 @@ var DatasetMap = React.createClass({
                 {maxZoom: 18, zIndex: -1});
 
             // WMS layer
-            let url = "http://waapi.webatlas.no/wms-temadata/?APITOKEN=" + key;
+            let url = "http://waapi.webatlas.no/" + this.props.service + "/?APITOKEN=" + key;
             let wmsOptions = {
-                layers: ["layergroup_", this.props.dataset.Id].join(""),
+                layers: "Eiendomskart",
                 format: 'image/png',
                 transparent: true
             };
@@ -27,7 +27,7 @@ var DatasetMap = React.createClass({
 
             // Map
             let position = [63.41, 10.4];
-            let zoom = 11;
+            let zoom = 9;
             let mapSettings = {
                 layers: [mapLayer, wmsLayer],
                 attributionControl: false,
@@ -35,15 +35,14 @@ var DatasetMap = React.createClass({
                 zoomControl: false
             };
             let map = L.map(div, mapSettings).setView(position, zoom);
-            map.fitBounds(wmsLayer.getBounds());
             // L.tileLayer.webatlas({apikey: key, mapType: L.TileLayer.Webatlas.Type.GREY}).addTo(map);
         },
 
         render: function () {
-            return (<div className="map"></div>);
+            return (<div className="wmsMap"></div>);
         }
 
 
 });
 
-export default DatasetMap;
+export default WmsMap;

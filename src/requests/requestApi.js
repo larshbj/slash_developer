@@ -3,7 +3,7 @@ import {key} from './key.js';
 
 var BASE_URL = '//www.webatlas.no/WAAPI-Datavarehus';
 
-export default function callApi(method, path, data, callback) {
+export function callApi(method, path, data, callback) {
     var headers = {
         'X-WAAPI-Token': key,
         'Accept': 'application/json; charset=utf-8'
@@ -29,14 +29,34 @@ export default function callApi(method, path, data, callback) {
     });
 }
 
-export function callWms(method, path, callback) {
-    let BASE_URL = '//:http://waapi.webatlas.no';
+// export function callWms(method, path, data, callback) {
+//     $.ajax({
+//         type: method,
+//         url: '//www.webatlas.no/' + path + '&APITOKEN=' + key,
+//         dataType: "xml",
+//         error: function (err) {
+//             try {
+//                 console.log(err.response);
+//                 // callback(JSON.parse(err.response));
+//             } catch (e) {
+//                 callback(err);
+//             }
+//         },
+//         success: function (resp) {
+//             callback(null, resp);
+//         }
+
+//     });
+// }
+export function callWms(method, path, data, callback) {
     var headers = {
-        'APITOKEN': key
+        'APITOKEN': key,
+        'Accept': 'text/xml; charset=utf-8'
     };
     reqwest({
-        url: BASE_URL + path,
+        url: '//waapi.webatlas.no/' + path,
         crossOrigin: true,
+        withCredentials: true,
         type: 'xml',
         method: method,
         contentType: 'text/xml; charset=utf-8',
@@ -44,7 +64,7 @@ export function callWms(method, path, callback) {
         data: data,
         error: function (err) {
             try {
-                callback(JSON.parse(err.response));
+                // callback(JSON.parse(err.response));
             } catch (e) {
                 callback(err);
             }
