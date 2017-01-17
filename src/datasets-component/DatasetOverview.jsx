@@ -12,7 +12,7 @@ export default function DatasetOverview(props) {
         .uniq()
         .value();
     return (
-        <div>
+        <div className="dataset-overview">
             <div className="row">
                 <div className="col-md-6">
                     <strong>Id:</strong> {dataset.Id}

@@ -1,0 +1,43 @@
+.home {
+    // position: inherit;
+    // height: 100%;
+    margin: 0 auto;
+    // width: 50%;
+    text-align: center;
+}
+
+.post {
+    // position: relative;
+    // top: 25%;
+    display: inline-block;
+    margin: 2.5%;
+
+    // padding: 1.5625rem 2.8125rem 2.5rem;
+    // margin-right: 5%; 
+    // -webkit-transform: translate3d(0,0,0);
+    // transform: translate3d(0,0,0);
+}
+
+.page-link {
+    padding: 4.6875rem 8.4375rem 7.5rem;
+    text-decoration: none;
+    color: black;
+    font-family: "NorkartAvenirHeavy", "Helvetica Neue", arial, sans-serif;
+    font-size: 3rem;
+    weight: bold;
+    background-color: #f9f9f9;
+    // box-sizing: border-box;
+
+    &:hover {
+        text-decoration: none;
+        color: black;
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.4);
+        box-shadow: inset 0 0 6px rgba(0,0,0,0.2);
+
+    }
+
+    // &:visited {
+    //     text-decoration: none;
+    //     color: black;
+    // }
+}

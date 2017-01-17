@@ -51,8 +51,8 @@ var WmsListFetcher = React.createClass({
         //     let service = listOfWms[s];
 
         // }
-        // getWms(this.gotWms, 'wms-matrikkelkart');
-        this.setState({wms: mockJson});
+        getWms(this.gotWms, 'wms-matrikkelkart');
+        // this.setState({wms: mockJson});
     },
 
     gotWms: function (err, wms) {

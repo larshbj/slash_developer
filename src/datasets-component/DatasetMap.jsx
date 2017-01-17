@@ -26,8 +26,8 @@ var DatasetMap = React.createClass({
             let wmsLayer = L.tileLayer.wms(url, wmsOptions);
 
             // Map
-            let position = [63.41, 10.4];
-            let zoom = 11;
+            let position = [59.891555, 10.523173]; //Norkart Sandvika
+            let zoom = 13;
             let mapSettings = {
                 layers: [mapLayer, wmsLayer],
                 attributionControl: false,
@@ -35,7 +35,7 @@ var DatasetMap = React.createClass({
                 zoomControl: false
             };
             let map = L.map(div, mapSettings).setView(position, zoom);
-            map.fitBounds(wmsLayer.getBounds());
+            // map.fitBounds(wmsLayer.getBounds());
             // L.tileLayer.webatlas({apikey: key, mapType: L.TileLayer.Webatlas.Type.GREY}).addTo(map);
         },
 

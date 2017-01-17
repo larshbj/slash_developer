@@ -124,7 +124,7 @@ export default function (props) {
     return (
         <ReactTable
             items={props.datasets}
-            searchFunction={searchTable}
+            searchFunction={filterTable}
             filterable={true}
             showIndex={false}
             columns={columns} />

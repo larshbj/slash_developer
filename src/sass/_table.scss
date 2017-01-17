@@ -2,11 +2,6 @@
     border-radius: 0;
 }
 
-
-// .react-table .table > thead > tr > th,
-// .react-table .table > thead > tr > td,
-// .react-table .table > tfoot > tr > th,
-// .react-table .table > tfoot > tr > td, 
 .react-table .table > tbody > tr {
     background-color: #f9f9f9;
     border-collapse:collapse;
@@ -26,52 +21,59 @@
 
 }
 
-// .row &.dataset {
-//         display: table;
-// }
+.col-md-3 {
+    &.list {
+        overflow: auto;
 
-// .col-md-9 {
-//     &.details {
-//         display: table-cell;
-//     }
-// }
-
-// .col-md-3 &.list {
-//         display: table-cell;
-//         overflow: hidden;
-//         // position: relative;
-//         // height:inherit;
-// }
-
-.list-group {
-    // position: relative;
-    height: 120%; // to set it approx to details and map height
-    overflow: auto;
-
-    &::-webkit-scrollbar {
+        &::-webkit-scrollbar {
         width: 12px;
+        }
+
+        &::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.2);
+            border-radius: 5px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            border-radius: 5px;
+            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+        }
     }
-
-    &::-webkit-scrollbar-track {
-        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.2);
-        border-radius: 5px;
-    }
-
-    &::-webkit-scrollbar-thumb {
-        border-radius: 5px;
-        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-    }
-
-
 }
 
+.col-md-9 {
+    &.details {
+        height:100%;
+        overflow:auto;
 
-.page-header {
-    margin: 0px 0 20px;
+        &::-webkit-scrollbar {
+        width: 12px;
+        }
+
+        &::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.2);
+            border-radius: 5px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            border-radius: 5px;
+            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+        }
+
+        .page-header {
+            margin: 0px 0 20px;
+        }
+
+    }
+}
+
+.list-group {
+    height: 100%; // to set it approx to details and map height
 }
 
 .nav-tabs > li > a {
     border-radius:0px;
+    cursor:pointer;
 }
 .avtive {
     border-radius:0px;
@@ -84,17 +86,3 @@
 .glyphicon-search {
     top:25%;
 }
-// .react-table .table {
-//     border-collapse: collapse;
-// }
-
-
-// .react-table .table > tbody {
-//     border-top: 2px solid #ddd;
-// }
-// .table>tbody>tr>td,
-// .table>tbody>tr>th,
-// .table>tfoot>tr>td,
-// .table>tfoot>tr>th,
-// .table>thead>tr>td,
-// .table>thead>tr>th

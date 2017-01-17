@@ -22,7 +22,6 @@ export default function filterTable(filter, items) {
     if (filter.length < 0) {
         return items;
     }
-    console.log(filter);
 
     return _.filter(items, function (item) {
         if (!item.Sokeord) {

@@ -18,6 +18,7 @@ var DatasetDetail = React.createClass({
         return {
             tabs: [
                 {id: 'map', title: 'Kart', component: DatasetMap},
+                {id: 'overview', title: 'Detaljer', component: DatasetOverview},
                 {id: 'attributes', title: 'Attributter', component: AttributeTable}
             ]
         };
@@ -34,27 +35,20 @@ var DatasetDetail = React.createClass({
                 <div className="page-header">
                     <h2>{this.props.dataset.Name}</h2>
                 </div>
-                <DatasetOverview {...this.props} />
-                <div className="row">
-                    <div className="col-md-12">
-                        <div className="page-header">
-                        </div>
-                        <ul className="nav nav-tabs">
-                            {_.map(this.props.tabs, function (tab) {
-                                return (
-                                    <li
-                                        key={tab.id}
-                                        className={tab.id === this.state.tab ? 'active' : ''}>
-                                        <a onClick={this.selectTab.bind(this, tab.id)}>
-                                            {tab.title}
-                                        </a>
-                                    </li>
-                                );
-                            }, this)}
-                        </ul>
-                        <Component {...this.props} />
-                    </div>
-                </div>
+                    <ul className="nav nav-tabs">
+                        {_.map(this.props.tabs, function (tab) {
+                            return (
+                                <li
+                                    key={tab.id}
+                                    className={tab.id === this.state.tab ? 'active' : ''}>
+                                    <a onClick={this.selectTab.bind(this, tab.id)}>
+                                        {tab.title}
+                                    </a>
+                                </li>
+                            );
+                        }, this)}
+                    </ul>
+                    <Component {...this.props} />
             </div>
         );
     }

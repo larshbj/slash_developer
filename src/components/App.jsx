@@ -7,19 +7,20 @@ function Navigation(props) {
     var currentLocation = props.location.pathname;
     var content;
     if (currentLocation === '/') {
-        content = null;
+        content = (<div className="page-header"></div>);
     } else {
         content = (
-            <div className="page-nav">
+            <div className="col-md-12 page-nav">
                 <NavLink to="/api">APIer</NavLink>
                 <NavLink to="/datasets">Datasett</NavLink>
                 <NavLink to="/wms">WMS / Kart</NavLink>
                 <NavLink to="/plugins">Plugins</NavLink>
+              <div className="page-header"></div>
             </div>
         );
     }
     return (
-      <div>
+      <div className="row page-nav">
         {content}
       </div>
     );
@@ -28,11 +29,12 @@ function Navigation(props) {
 const App = React.createClass({
   render: function () {
     return (
-      <div className="master-wrapper">
-        <div className="headerBox">
-          <div className="headerContent">
-            <Link to="/"onlyActiveOnIndex={true} className="headerTitle">For utviklere</Link>
-            <div className="descriptionContainer">
+      <div className="container-fluid">
+          <div className="row headerContent">
+            <div className="col-md-6 headerContainer">
+              <Link to="/"onlyActiveOnIndex={true} className="headerTitle">For utviklere</Link>
+            </div>
+            <div className="col-md-6 descriptionContainer">
                 <span className="headerDescription">
                 Norkart tilbyr API’er for alle som har 
                 lyst til å integrere våre detaljerte kart i egne løsninger, 
@@ -40,12 +42,13 @@ const App = React.createClass({
                 </span>
             </div>
           </div>
-        </div>
         <Navigation
               {...this.props}/>
 
-        <div className ="page">
-          {this.props.children}
+        <div className="row page">
+          <div className="col-md-12">
+            {this.props.children}
+          </div>
         </div>
 
       </div>

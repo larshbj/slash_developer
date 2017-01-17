@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router';
+import {Link} from 'react-router';
 
 export default React.createClass({
     contextTypes: {
@@ -9,7 +9,7 @@ export default React.createClass({
     getClassName: function () {
         let isActive = this.context.router.isActive(this.props.to, true);
         let active = isActive ? 'active' : '';
-        return ["main-link", active].join(" ");
+        return ['main-link', active].join(' ');
     },
 
     render() {
