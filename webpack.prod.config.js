@@ -3,12 +3,11 @@ var webpack = require('webpack');
 
 module.exports = {
   entry: './src/index.jsx',
-  devtool: 'eval',
 
   output: {
-    path: path.join(__dirname, './bundles'),
+    path: path.join(__dirname, './public'),
     filename: 'app.bundle.js',
-    publicPath: 'http://localhost:3000/bundles/'
+    publicPath: '/public/'
   },
 
   module: {
@@ -41,9 +40,6 @@ module.exports = {
       modulesDirectories: ['node_modules'],
       root: path.resolve(__dirname, "src"),
       extensions: ['', '.js', '.jsx'],
-      alias: {
-        'mapbox-gl': path.resolve('./node_modules/mapbox-gl/dist/mapbox-gl.js')
-      }
   },
   plugins: [
       new webpack.ProvidePlugin({

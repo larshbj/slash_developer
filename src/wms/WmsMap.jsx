@@ -26,8 +26,8 @@ var WmsMap = React.createClass({
             let wmsLayer = L.tileLayer.wms(url, wmsOptions);
 
             // Map
-            let position = [63.41, 10.4];
-            let zoom = 9;
+            let position = [59.891555, 10.523173]; //Norkart Sandvika
+            let zoom = 17;
             let mapSettings = {
                 layers: [mapLayer, wmsLayer],
                 attributionControl: false,

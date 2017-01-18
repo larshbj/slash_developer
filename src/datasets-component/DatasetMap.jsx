@@ -27,7 +27,7 @@ var DatasetMap = React.createClass({
 
             // Map
             let position = [59.891555, 10.523173]; //Norkart Sandvika
-            let zoom = 13;
+            let zoom = 15;
             let mapSettings = {
                 layers: [mapLayer, wmsLayer],
                 attributionControl: false,

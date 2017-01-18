@@ -12,11 +12,9 @@ export default React.createClass({
 
     render() {
         return (
-                <div className="post">
-                    <Link
-                        {...this.props}
-                        className={this.getClassName(this.props.page)}/>
-                </div>
+            <Link
+                {...this.props}
+                className={this.getClassName(this.props.page)}/>
         );
     }
 });

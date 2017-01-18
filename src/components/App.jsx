@@ -38,7 +38,9 @@ const App = React.createClass({
                 <span className="headerDescription">
                 Norkart tilbyr API’er for alle som har 
                 lyst til å integrere våre detaljerte kart i egne løsninger, 
-                eller ta i bruk våre data og tjenester.
+                eller ta i bruk våre data og tjenester. Våre tjenester er basert på nyeste teknologi, 
+                er optimalisert for høy ytelse og kan benyttes både på web og mobile enheter. 
+                Serverne våre har høy kapasitet og garantert oppetid.
                 </span>
             </div>
           </div>
@@ -46,9 +48,7 @@ const App = React.createClass({
               {...this.props}/>
 
         <div className="row page">
-          <div className="col-md-12">
             {this.props.children}
-          </div>
         </div>
 
       </div>

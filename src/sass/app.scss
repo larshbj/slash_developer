@@ -43,10 +43,10 @@ body {
     background-color: white;
     padding: 0.5% 1%;
     margin-right: 3%;
-    border-top: 0.3vh solid darkgrey;
-    border-left: 0.3vh solid darkgrey;
-    border-right: 0.3vh solid darkgrey;
-    border-bottom: 0.3vh solid darkgrey;
+    border: 0.3vh solid darkgrey;
+    // border-left: 0.3vh solid darkgrey;
+    // border-right: 0.3vh solid darkgrey;
+    // border-bottom: 0.3vh solid darkgrey;
     text-align: center;
     text-decoration: none;
     color: black;
@@ -103,7 +103,7 @@ body {
 
 .col-md-6 {
     &.descriptionContainer {
-        max-width: 55rem;
+        max-width: 65rem;
         margin-top:30px;
     }
 }

@@ -19,6 +19,16 @@ function firstN(str, n) {
     }
     return words.slice(0, n).join(' ') + '...';
 }
+function firstNLetters(str, n) {
+    if (!str) {
+        return str;
+    }
+    var words = str.split('');
+    if (words.length <= n) {
+        return str;
+    }
+    return words.slice(0, n).join('') + '...';
+}
 
 var columns = [
     {
@@ -37,7 +47,7 @@ var columns = [
         id: 'about',
         name: 'Beskrivelse',
         formatter: function (dataset) {
-            return (<p title={dataset.about}>{firstN(dataset.about, 10)}</p>);
+            return (<p title={dataset.about}>{firstN(dataset.about, 20)}</p>);
         },
         sortParams: 'about',
         sortable: false
@@ -59,7 +69,7 @@ var columns = [
             if (!dataset.documentation) {
                 return '-';
             }
-            return (<a href={dataset.documentation} target="_blank">link</a>);
+            return (<a href={dataset.documentation} target="_blank">{firstNLetters(dataset.documentation, 10)}</a>);
         }
     }
 ];
