@@ -3,10 +3,10 @@ import DatasetList from './DatasetList';
 import {Link} from 'react-router';
 import getDatasets from '../requests/getDatasets';
 import DatasetTable from './DatasetTable';
+import DatasetDetail from './DatasetDetail';
 
 function Datasets(props) {
     var selectedDataset = props.params.datasetId;
-    console.log(props.datasets);
     if (selectedDataset) {
         selectedDataset = parseInt(selectedDataset, 10);
     }
@@ -15,7 +15,8 @@ function Datasets(props) {
         content = (
             <div className="row dataset">
                 <div className="col-md-3 list">
-                    <DatasetList 
+                    <DatasetList
+                        {...props} 
                         selectedDataset={selectedDataset}
                         datasets={props.datasets}/>
                 </div>

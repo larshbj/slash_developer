@@ -11,7 +11,9 @@ import getDataFromSet from '../requests/getDataFromSet.js';
 var DatasetDetail = React.createClass({
 
     getInitialState: function () {
-        return {tab: 'map'};
+        return ({
+            tab: 'map'
+        });
     },
 
     getDefaultProps: function () {
@@ -91,6 +93,7 @@ export default function (props) {
     var datasetId = parseInt(props.params.datasetId, 10);
     return (
         <DatasetDetailFetcher
+            {...props}
             key={datasetId}
             datasetId={datasetId}/>
     );

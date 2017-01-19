@@ -20,7 +20,7 @@ ReactDOM.render((
         <Route path="/api" component={Api}/>
         <Route path="/datasets" component={Datasets}>
             <Route path="/datasets/:datasetId" component={DatasetDetail}>
-                <Route path="/datasets/:datasetId/map" component={DatasetMap}/>
+                <Route path="/datasets/:datasetId" component={DatasetMap}/>
             </Route>
         </Route>
         <Route path="/wms" component={Wms}/>

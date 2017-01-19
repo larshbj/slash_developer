@@ -5,37 +5,33 @@ export default function filterTable(filter, items) {
     //     return items;
     // }
     // var filter = filter.toLowerCase();
-    // return _.filter(items, function (item) {
-    //     if (!item.Sokeord) {
-    //         return false;
-    //     }
-    //     let searchWords = item.Sokeord.split(',');
-    //     for (let w in searchWords) {
-    //         let word = searchWords[w].trim();
-    //         if (word.toLowerCase().indexOf(filter) > -1) {
-    //             return true;
-    //         }
-    //     }
-    //     return false;
-    // });
     var filter = filter.toLowerCase().split(' ');
     if (filter.length < 0) {
         return items;
     }
-
     return _.filter(items, function (item) {
-        if (!item.Sokeord) {
-            return false;
-        }
-        let searchWords = item.Sokeord.split(',');
         return _.every(filter, function (tag) {
-            for (let w in searchWords) {
-                let word = searchWords[w].trim();
-                if (word.toLowerCase().indexOf(tag.trim()) > -1) {
-                    return true;
-                }
+            var hit = item.Name.toLowerCase().indexOf(tag.trim()) > -1;
+            if (!hit && item.Sokeord) {
+                hit = hit || item.Sokeord.toLowerCase().indexOf(tag.trim()) > -1;
             }
-            return false;
+            if (!hit && item.Opplysninger) {
+                hit = hit || item.Opplysninger.toLowerCase().indexOf(tag.trim()) > -1;
+            }
+
+            return hit;
         });
+        // var hit = item.Name.toLowerCase().indexOf(filter) > -1;
+
+        // if (!hit && item.Sokeord) {
+        //     hit = hit || item.Sokeord.toLowerCase().indexOf(filter) > -1;
+        // }
+        // if (!hit && item.Opplysninger) {
+        //     hit = hit || item.Opplysninger.toLowerCase().indexOf(filter) > -1;
+        // }
+
+        // return hit;
     });
+
+
 }

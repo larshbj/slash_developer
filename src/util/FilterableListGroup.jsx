@@ -59,9 +59,11 @@ var FilterableListGroup = React.createClass({
                     {_.map(items, function (item) {
                         return (
                             <ItemComponent
+                                {...props}
                                 key={item[props.idAttr]}
                                 selected={props.selectedItem === item[props.idAttr]}
-                                item={item}/>
+                                item={item}
+                                />
                         );
                     })}
                 </div>
