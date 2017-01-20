@@ -76,27 +76,31 @@ export function callWms(method, path, data, callback) {
 }
 
 export function callWmsLegend(method, path, data, callback) {
-    var headers = {
-        'APITOKEN': key
-        // 'Accept': 'text/xml; charset=utf-8'
-    };
+    // var headers = {
+    //     'APITOKEN': key,
+    //     'Accept': 'image/png'
+    // };
     reqwest({
-        url: '//waapi.webatlas.no/wms-temadata/?' + path,
+        url: '//waapi.webatlas.no/wms-temadata/?' + path + '&APITOKEN=' + key,
         crossOrigin: true,
         withCredentials: true,
         type: 'png',
         method: method,
-        contentType: 'image/png',
-        headers: headers,
+        contentType: 'image/png;base64',
+        // headers: headers,
         data: data,
         error: function (err) {
             try {
+              console.log("lsdjflskdjfl");
                 // callback(JSON.parse(err.response));
             } catch (e) {
                 callback(err);
             }
         },
         success: function (resp) {
+            console.log(resp);
+            // var urlCreator = window.URL || window.webkitURL;
+            // var imageUrl = urlCreator.createObjectURL(resp.response);
             callback(null, resp);
         }
     });

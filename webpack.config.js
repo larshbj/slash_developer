@@ -40,10 +40,7 @@ module.exports = {
   resolve: {
       modulesDirectories: ['node_modules'],
       root: path.resolve(__dirname, "src"),
-      extensions: ['', '.js', '.jsx'],
-      alias: {
-        'mapbox-gl': path.resolve('./node_modules/mapbox-gl/dist/mapbox-gl.js')
-      }
+      extensions: ['', '.js', '.jsx', '.css']
   },
   plugins: [
       new webpack.ProvidePlugin({
