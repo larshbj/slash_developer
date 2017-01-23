@@ -33,7 +33,14 @@ function Datasets(props) {
         );
     }
     return (
-        <div className="datasets">
+        <div className="col-md-12 datasets">
+            <div className="row description-text">
+                <div className="col-md-5 description-text">
+                    <Link to="/datasets">Oversikt</Link>
+                    <a> / </a>
+                    <Link to="/datasets/1">Detaljert</Link>
+                </div>
+            </div>
             {content}
         </div>
     );

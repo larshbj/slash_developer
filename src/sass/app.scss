@@ -23,7 +23,7 @@ body {
     &.page-nav {
         top: 20%;
         width:100%;
-        height:10%;
+        height:7%;
         text-align: left;
 
         .page-header {
@@ -110,5 +110,16 @@ body {
 
 .headerDescription {
     font-size: 20px;
+}
+
+.row {
+    &.description-text {
+        margin-bottom:15px;
+    }
+}
+.col-md-5 {
+    &.description-text {
+        font-size: 1.5rem;
+    }
 }
 

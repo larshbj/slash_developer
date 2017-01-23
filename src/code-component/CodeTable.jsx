@@ -66,7 +66,7 @@ var columns = [
             if (!dataset.documentation) {
                 return '-';
             }
-            return (<a href={dataset.documentation} target="_blank">{firstNLetters(dataset.documentation, 10)}</a>);
+            return (<a href={dataset.documentation} target="_blank">{dataset.documentation}</a>);
         }
     }
 ];
@@ -74,7 +74,7 @@ var columns = [
 export default function (props) {
     return (
         <ReactTable
-            items={props.apis}
+            items={props.plugins}
             searchFunction={filterTable}
             filterable={true}
             showIndex={false}

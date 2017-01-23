@@ -6,7 +6,7 @@ import Api from './api-component/Api.jsx';
 import Datasets from './datasets-component/Datasets.jsx';
 import DatasetDetail from './datasets-component/DatasetDetail.jsx';
 import DatasetMap from './datasets-component/DatasetMap.jsx';
-import Code from './components/Code.jsx';
+import Code from './code-component/Code.jsx';
 import Home from './components/Home.jsx';
 import Wms from './wms/Wms.jsx';
 require('./sass/app.scss');

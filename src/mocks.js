@@ -385,3 +385,27 @@ export const mockWms = [
     "Eksempel": "bilde"
   }
 ]
+
+export const mockPlugins = [
+  {
+    "index": 0,
+    "Name": "L.TileLayer.Webatlas",
+    "about": "En Leaflet-plugin for å bruke våre bakgrunnskart",
+    "category": "Leaflet",
+    "documentation": "https://github.com/Norkart/L.TileLayer.Webatlas"
+  },
+  {
+    "index": 1,
+    "Name": "L.Control.NorkartSearch",
+    "about": "En Leaflet-plugin for å enkelt legge til adressesøk fra Norkart",
+    "category": "Leaflet",
+    "documentation": "https://github.com/Norkart/L.Control.NorkartSearch"
+  },
+  {
+    "index": 2,
+    "Name": "lrm-ferd",
+    "about": "Plugin som lar deg bruke ruteberegningstjenesten Ferd i Leaflet via Leaflet Routing Machine",
+    "category": "Leaflet",
+    "documentation": "https://github.com/Norkart/lrm-ferd"
+  }
+]

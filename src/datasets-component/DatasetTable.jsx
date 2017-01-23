@@ -39,20 +39,6 @@ var columns = [
         isSorted: false,
         sortDirection: 'asc'
     },
-    // {
-    //     id: 'Dataeier',
-    //     name: 'Dataeier',
-    //     sortParams: 'Dataeier',
-    //     filterable: true,
-    //     isSorted: false,
-    //     sortDirection: 'asc'
-    // },
-    // {
-    //     id: 'GeoNorgeUuid',
-    //     name: 'GeoNorgeUuid',
-    //     sortParams: 'GeoNorgeUuid',
-    //     sortable: false
-    // },
     {
         id: 'Opplysninger',
         name: 'Opplysninger',
@@ -72,13 +58,6 @@ var columns = [
             return moment(dataset.Version).format('DD.MM.YYYY');
         }
     },
-    // {
-    //     id: 'Vedlikehold',
-    //     name: 'Vedlikehold',
-    //     sortParams: 'Vedlikehold',
-    //     isSorted: false,
-    //     sortDirection: 'asc'
-    // },
     {
         id: 'Datafangstmetode',
         name: 'Datafangstmetode',
@@ -100,27 +79,9 @@ var columns = [
             return (<a href={dataset.Link}>link</a>);
         }
     }
-    // {
-    //     id: 'Kartlink',
-    //     name: 'Eksempel',
-    //     sortParams: 'Kartlink',
-    //     sortable: false,
-    //     formatter: function (dataset) {
-    //         return (
-    //             <Link to={'/datasets/' + dataset.Id + '/map'}>Kart</Link>
-    //         );
-    //     }
-    // }
 ];
 
 export default function (props) {
-    // console.log(props);
-    // let datasets = props.datasets;
-    // for (let set in datasets) {
-    //     let dataset = datasets[set];
-    //     let id = dataset.Id;
-    //     dataset.Kartlink = props.location.pathname + "/" + id + "/map";
-    // }
     return (
         <ReactTable
             items={props.datasets}
