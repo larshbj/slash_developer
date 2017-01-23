@@ -9,3 +9,60 @@
     width:100%;
     background: #ccc;
 }
+
+.leaflet-control-container {
+    height:100%;
+}
+
+.leaflet-top {
+    &.leaflet-right {
+        height:100%;
+        width:100%;
+    }
+}
+
+.leaflet-control-wms-legend {
+    // display: block;
+    padding: 3px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    box-shadow: 0 1px 7px rgba(0, 0, 0, 0.80);
+    cursor: auto;
+    text-align: center;
+    background-color: #FFFFFF;
+    max-height:25%;
+    max-width:50%;
+    overflow: auto;
+
+    &::-webkit-scrollbar {
+    width: 12px;
+    }
+
+    &::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.2);
+        border-radius: 5px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border-radius: 5px;
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    }
+}
+
+.leaflet-control-wms-legend:hover {
+    background-color: #F4F4F4;
+}
+
+// .wms-legend {
+
+// }
+
+// .legend-header {
+
+// }
+
+// .minimize {
+//     position: relative;
+//     top:0;
+// }

@@ -1,13 +1,13 @@
-import {callWms} from './requestApi';
+// import {callWms} from './requestApi';
 
-export default function getWms(callback, dataset) {
-    let path = [
-                ["layergroup_", dataset].join(""),
-                "service=wms",
-                "request=GetLegendGraphics",
-                "format=image/png",
-                "width=20",
-                "height=20"
-                ].join("&");
-    callWms('get', path, null, callback);
-}
+// export default function getWms(callback, dataset) {
+//     let path = [
+//                 ["layer=layergroup_", dataset].join(""),
+//                 "service=wms",
+//                 "request=GetLegendGraphics",
+//                 "format=image/png",
+//                 "width=20",
+//                 "height=20"
+//                 ].join("&");
+//     callWmsLegend('get', path, null, callback);
+// }

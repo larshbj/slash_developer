@@ -29,25 +29,6 @@ export function callApi(method, path, data, callback) {
     });
 }
 
-// export function callWms(method, path, data, callback) {
-//     $.ajax({
-//         type: method,
-//         url: '//www.webatlas.no/' + path + '&APITOKEN=' + key,
-//         dataType: "xml",
-//         error: function (err) {
-//             try {
-//                 console.log(err.response);
-//                 // callback(JSON.parse(err.response));
-//             } catch (e) {
-//                 callback(err);
-//             }
-//         },
-//         success: function (resp) {
-//             callback(null, resp);
-//         }
-
-//     });
-// }
 export function callWms(method, path, data, callback) {
     var headers = {
         'APITOKEN': key,
@@ -75,29 +56,29 @@ export function callWms(method, path, data, callback) {
     });
 }
 
-export function callWmsLegend(method, path, data, callback) {
-    var headers = {
-        'APITOKEN': key
-        // 'Accept': 'text/xml; charset=utf-8'
-    };
-    reqwest({
-        url: '//waapi.webatlas.no/wms-temadata/?' + path,
-        crossOrigin: true,
-        withCredentials: true,
-        type: 'png',
-        method: method,
-        contentType: 'image/png',
-        headers: headers,
-        data: data,
-        error: function (err) {
-            try {
-                // callback(JSON.parse(err.response));
-            } catch (e) {
-                callback(err);
-            }
-        },
-        success: function (resp) {
-            callback(null, resp);
-        }
-    });
-}
+// export function callWmsLegend(method, path, data, callback) {
+//     var headers = {
+//         'APITOKEN': key
+//         // 'Accept': 'text/xml; charset=utf-8'
+//     };
+//     reqwest({
+//         url: '//waapi.webatlas.no/wms-temadata/?' + path,
+//         crossOrigin: true,
+//         withCredentials: true,
+//         type: 'png',
+//         method: method,
+//         contentType: 'image/png',
+//         headers: headers,
+//         data: data,
+//         error: function (err) {
+//             try {
+//                 // callback(JSON.parse(err.response));
+//             } catch (e) {
+//                 callback(err);
+//             }
+//         },
+//         success: function (resp) {
+//             callback(null, resp);
+//         }
+//     });
+// }
