@@ -6,13 +6,11 @@ var mocks = require('../mocks.js');
 let mockJson = mocks.mockApi;
 
 function Api(props) {
-    console.log(props.params.apiId);
     var selectedApi = props.params.apiId;
     if (selectedApi) {
         selectedApi = parseInt(selectedApi, 10);
     }
     var content;
-    console.log(selectedApi);
     if (selectedApi) {
         // content = (
         //     <div className="row">

@@ -42,8 +42,8 @@ export default React.createClass({
                     Plugins
                     <div className="post-text">
                         Den mest brukte funksjonaliteten vår har vi gjort enkelt 
-                        tilgjengelig som plugins til Leaflet. Det betyr at det er 
-                        enkelt å sette opp et bakgrunnskart og stedsnavnssøk.
+                        tilgjengelig som plugins til Leaflet. Dette betyr at det 
+                        er utrolig enkelt å ta i bruk kartdata og -tjenester fra Norkart.
                     </div>
                 </PageLink>
         </div>

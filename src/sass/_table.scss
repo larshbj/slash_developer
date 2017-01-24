@@ -3,7 +3,7 @@
 }
 
 .react-table .table > tbody > tr {
-    background-color: #f9f9f9;
+    background-color: #F6F6F6;
     border-collapse:collapse;
     &:hover {
         background-color: #ddd;
@@ -19,6 +19,26 @@
     border-bottom:0rem solid white;
     font-family: "NorkartAvenirHeavy", "Helvetica Neue", arial, sans-serif;
 
+}
+
+.api-doc-info {
+    // text-align: center;
+    // float: center;
+    // width:100%;
+    // text-align: center;
+    // margin: 0 auto;
+}
+.api-doc-info-img {
+    // text-align: center;
+    // float: center;
+    // width:100%;
+    width:24px;
+    position: relative;
+    left: 50%;
+    margin-left: -12px;
+    // height:24px;
+    // margin: 0 auto;
+    // display: inline-block;
 }
 
 .col-md-3 {

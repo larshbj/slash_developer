@@ -12,6 +12,9 @@ import Wms from './wms/Wms.jsx';
 require('./sass/app.scss');
 require('leaflet/dist/leaflet.css');
 
+require('../node_modules/leaflet.fullscreen/Control.FullScreen.js');
+require('../node_modules/leaflet.fullscreen/Control.FullScreen.css');
+
 
 ReactDOM.render((
   <Router history={hashHistory}>

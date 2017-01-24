@@ -43,7 +43,7 @@ var columns = [
         id: 'Opplysninger',
         name: 'Opplysninger',
         formatter: function (dataset) {
-            return (<p title={dataset.Opplysninger}>{firstN(dataset.Opplysninger, 5)}</p>);
+            return (<p title={dataset.Opplysninger}>{firstN(dataset.Opplysninger, 8)}</p>);
         },
         sortParams: 'Opplysninger',
         sortable: false
@@ -66,19 +66,19 @@ var columns = [
         },
         sortParams: 'Datafangstmetode',
         sortable: false
-    },
-    {
-        id: 'Link',
-        name: 'Link',
-        sortParams: 'Link',
-        sortable: false,
-        formatter: function (dataset) {
-            if (!dataset.Link) {
-                return '-';
-            }
-            return (<a href={dataset.Link}>link</a>);
-        }
     }
+    // {
+    //     id: 'Link',
+    //     name: 'Link',
+    //     sortParams: 'Link',
+    //     sortable: false,
+    //     formatter: function (dataset) {
+    //         if (!dataset.Link) {
+    //             return '-';
+    //         }
+    //         return (<a href={dataset.Link}>link</a>);
+    //     }
+    // }
 ];
 
 export default function (props) {

@@ -32,7 +32,8 @@ var WmsMap = React.createClass({
                 layers: [mapLayer, wmsLayer],
                 attributionControl: false,
                 crs: L.CRS.EPSG3857,
-                zoomControl: false
+                zoomControl: false,
+                fullscreenControl: true
             };
             let map = L.map(div, mapSettings).setView(position, zoom);
             // L.tileLayer.webatlas({apikey: key, mapType: L.TileLayer.Webatlas.Type.GREY}).addTo(map);

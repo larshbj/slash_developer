@@ -5,6 +5,9 @@ import * as _ from 'underscore';
 import {key} from '../requests/key.js';
 import {hashHistory} from 'react-router';
 import {getWmsLegend} from 'requests/getWmsLegend';
+// require('../../node_modules/leaflet.fullscreen/Control.FullScreen.js');
+// require('../../node_modules/leaflet.fullscreen/Control.FullScreen.css');
+// require('leaflet.fullscreen');
 
 let map;
 var DatasetMap = React.createClass({
@@ -13,7 +16,7 @@ var DatasetMap = React.createClass({
         legend_params: {
              'fontName': 'Arial',
              // 'fontStyle': 'normal',
-             'fontSize': '10',
+             'fontSize': '8',
              'fontColor': '0x000033',
              'fontAntiAliasing': 'true',
              'bgColor': '0xFFFFEE',
@@ -62,7 +65,8 @@ var DatasetMap = React.createClass({
                 layers: [mapLayer, wmsLayer],
                 attributionControl: false,
                 crs: L.CRS.EPSG3857,
-                zoomControl: false
+                zoomControl: true
+                // fullscreenControl: true
             };
 
             this.map = L.map(div, mapSettings).setView(position, zoom);

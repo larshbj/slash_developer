@@ -66,7 +66,8 @@ var columns = [
             if (!dataset.documentation) {
                 return '-';
             }
-            return (<a href={dataset.documentation} target="_blank">{firstNLetters(dataset.documentation, 10)}</a>);
+            // return (<a href={dataset.documentation} target="_blank">{firstNLetters(dataset.documentation, 10)}</a>);
+            return (<a href={dataset.documentation} target="_blank" className="api-doc-info"><img className="api-doc-info-img" alt="Info" src="../../images/nk_024-info-A.png"></img></a>);
         }
     }
 ];

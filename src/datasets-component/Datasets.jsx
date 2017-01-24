@@ -38,7 +38,7 @@ function Datasets(props) {
                 <div className="col-md-5 description-text">
                     <Link to="/datasets">Oversikt</Link>
                     <a> / </a>
-                    <Link to="/datasets/1">Detaljert</Link>
+                    <Link to="/datasets/1">Detaljer</Link>
                 </div>
             </div>
             {content}
